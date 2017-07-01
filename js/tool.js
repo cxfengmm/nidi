@@ -1,3 +1,4 @@
+//transition:
 function transition() {
     square[0].style.transition = '1.5s';
     square[1].style.transition = '1.5s';
@@ -7,7 +8,7 @@ function transition() {
     goHome.style.transition = '0.2s';
     navBar.style.transition = '0.2s';
 }
-
+//动画
 function animates() {
     setTimeout(function () {
         square[0].style.transform = 'scale(0) rotate(90deg)'
@@ -39,7 +40,7 @@ function animates() {
         move(title,{bottom:0},300,'easeIn')
     },7000)
 }
-
+//滚轮函数
 function addMouseScroll(init){
     init.ele.onmousewheel = fn;
     init.ele.addEventListener('DOMMouseScroll',fn)
@@ -62,12 +63,14 @@ function addMouseScroll(init){
         }
     }
 }
+//第0页
 function pageZero() {
     console.log(num)
     setTimeout(function () {
         onOff = true;
     },200)
 }
+//第1页
 function pageONe() {
     setTimeout(function () {
         move(decOne,{opacity:1},500,'linear');
@@ -85,7 +88,7 @@ function pageONe() {
         onOff = true;
     },1500)
 }
-
+//第2页
 function pageTwo() {
     setTimeout(function () {
         move(decTwo,{opacity:1},500,'linear');
@@ -105,7 +108,7 @@ function pageTwo() {
         onOff = true;
     },1500)
 }
-
+//第3页
 function pageThree() {
     setTimeout(function () {
         move(decThree,{opacity:1},500,'linear');
@@ -131,7 +134,7 @@ function pageThree() {
         onOff = true;
     },2000)
 }
-
+//第4页
 function pageFour() {
     setTimeout(function () {
         move(decFour,{opacity:1},500,'linear');
@@ -155,7 +158,7 @@ function pageFour() {
         onOff = true;
     },2000)
 }
-
+//不是第1页
 function notOne() {
     decOne.style.opacity = '0';
     textOne.style.opacity = '0';
@@ -165,7 +168,7 @@ function notOne() {
     adds[0].style.opacity = '0';
     btns[0].style.opacity = '0';
 };
-
+//不是第2页
 function notTwo() {
     decTwo.style.opacity = '0';
     textTwo.style.opacity = '0';
@@ -176,7 +179,7 @@ function notTwo() {
     adds[1].style.opacity = '0';
     btns[1].style.opacity = '0';
 };
-
+//不是第3页
 function notThree() {
     decThree.style.opacity = '0';
     textThree.style.opacity = '0';
@@ -190,7 +193,7 @@ function notThree() {
     adds[2].style.opacity = '0';
     btns[2].style.opacity = '0';
 };
-
+//不是第4页
 function notFour() {
     decFour.style.opacity = '0';
     textFour.style.opacity = '0';
@@ -202,7 +205,7 @@ function notFour() {
     adds[3].style.opacity = '0';
     btns[3].style.opacity = '0';
 };
-
+//第几页渲染什么内容
 function pageNum() {
     if(num==0){
         pageZero();
